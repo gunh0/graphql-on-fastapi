@@ -8,8 +8,9 @@ from strawberry.fastapi import GraphQLRouter
 @strawberry.type
 class Query:
     @strawberry.field
-    def hello(self) -> str:
-        return "Hello World"
+    def hello(self, info) -> str:
+        print("[+] Recived hello request")
+        return "world"
 
 
 schema = strawberry.Schema(Query)
