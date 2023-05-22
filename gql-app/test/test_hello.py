@@ -1,8 +1,12 @@
 import requests
 import concurrent.futures
+import threading
 
 
 def test_hello():
+    thread_num = threading.current_thread().name
+    print(f"Thread {thread_num}: Sending request")
+    
     url = "http://localhost:8080/graphql"
     query = """
         query {
@@ -10,7 +14,8 @@ def test_hello():
         }
     """
     response = requests.post(url, json={"query": query})
-    print(response.content)
+    
+    print(f"Thread {thread_num}: Response - Status Code: {response.status_code}, Content: {response.content}")
     assert response.status_code == 200
     assert response.json() == {"data": {"hello": "world"}}
 

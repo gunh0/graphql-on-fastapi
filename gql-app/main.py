@@ -1,5 +1,5 @@
 import strawberry
-
+from time import sleep
 
 from fastapi import FastAPI
 from strawberry.fastapi import GraphQLRouter
@@ -10,6 +10,7 @@ class Query:
     @strawberry.field
     def hello(self, info) -> str:
         print("[+] Recived hello request")
+        sleep(1)
         return "world"
 
 
