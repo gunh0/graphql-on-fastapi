@@ -42,10 +42,10 @@ $ pip install -r requirements.txt
 
 ### References
 
-- Run a Server Manually - Uvicorn : https://fastapi.tiangolo.com/ko/deployment/manually/
+- Run a Server Manually - Uvicorn : <https://fastapi.tiangolo.com/ko/deployment/manually/>
 
 <br/>
 
 ### Appendix
 
-- Gunicorn vs Python GIL : https://medium.com/@luis-sena/gunicorn-vs-python-gil-221e673d692
+- Gunicorn vs Python GIL : <https://medium.com/@luis-sena/gunicorn-vs-python-gil-221e673d692>
